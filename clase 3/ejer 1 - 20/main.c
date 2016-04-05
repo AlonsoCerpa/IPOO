@@ -1,58 +1,63 @@
+/*
+Reemplazamos tabs con espacios, en este caso para visualizar mejor se reemplaza con #
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #define MAXLINE 1000
 
-/*
-Respuesta a la pregunta del libro:
-n es una variable que cambia segun cuantos tabs hay en cada linea
- */
+int getline(char input[], int lim);
+void detab(char sintabs[], char input[]);
 
 int main()
 {
     int len;
-    char to[MAXLINE];
-    char s[MAXLINE];
+    char sintabs[MAXLINE];
+    char input[MAXLINE];
 
-    while((len = getline(s, MAXLINE)) > 0){
-        detab(to, s, len);
-        printf("String: %s", to);
+    while((len = getline(input, MAXLINE)) > 0){
+        detab(sintabs, input);
+        printf("%s", sintabs);
     }
     return 0;
+
 }
 
-int getline(char s[], int lim)
+int getline(char input[], int lim)
 {
     int c, i;
 
     for(i=0; i<lim-1 && (c=getchar()) != EOF && c != '\n'; ++i)
-        s[i] = c;
+        input[i] = c;
     if (c == '\n'){
-        s[i] = c;
+        input[i] = c;
         ++i;
     }
-    s[i] = '\0';
+    input[i] = '\0';
     return i;
 }
 
-void detab(char to[], char from[])
+void detab(char sintabs[], char input[])
 {
-    int h;
+    int coc, tab;
     int i = 0;
     int j = 0;
 
-    while(from[i] != '\0'){
-        if(from[i] == '\t'){
-            i+=4;
-            h = j+4;
-            while(j<=h){
-                to[j] = ' ';
+    while(input[i] != '\0'){
+        if(input[i] == '\t'){
+            coc = (j/8) + 1;
+            tab = 8 * coc;
+            ++i;
+            while(j<tab){
+                sintabs[j] = '#';
                 ++j;
             }
         }
         else{
-            to[j] = from[i];
-            ++j;
+            sintabs[j] = input[i];
             ++i;
+            ++j;
         }
     }
+    sintabs[j] = '\0';
 }
