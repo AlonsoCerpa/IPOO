@@ -15,7 +15,7 @@ int main()
     while((len = getline(input, MAXLINE)) > 0){
         numpos = fold(input, posic);
         for(y = 0; y<numpos-1; y+=2){
-            for(x = posic[y]; x<=posic[++y]; ++x)
+            for(x = posic[y]; x<=posic[y+1]; ++x)
                 printf("%c", input[x]);
             printf("\n");
         }
@@ -48,7 +48,7 @@ int fold(char input[], int posic[]){
             if(input[i] != ' '){
                 estado = 1;
                 if(i == tab-8){
-                    pos = i-8;
+                    pos = i;
                     posic[j] = pos;
                     ++j;
                 }
