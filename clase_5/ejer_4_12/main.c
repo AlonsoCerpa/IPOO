@@ -3,10 +3,10 @@
 #define MAXNUM 100
 
 int itoa_r(int, char[]);
-
+/* Convierte un int a un string recursivamente */
 int main()
 {
-    int x = 248;
+    int x = -248;
     char str[MAXNUM];
     int pos;
 
@@ -18,7 +18,7 @@ int main()
 
 int itoa_r(int num, char s[])
 {
-    static int i = 0;
+    static int i = 0;  /*Al ser recursiva la funcion, no queremos que se inicialice mas de 1 vez*/
 
     if (num < 0){
         s[i++] = '-';
