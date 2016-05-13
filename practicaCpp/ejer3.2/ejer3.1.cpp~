@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main(){
+	int a = 35;
+	printNum(a);
+	return 0;
+}
+
+void printNum(int number) { std::cout << number;}

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1463017681 source:/home/alonso/Escritorio/IPOO/practicaCpp/ejer5.2/main.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
+	<cmath>
+
