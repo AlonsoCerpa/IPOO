@@ -13,7 +13,7 @@ public:
     }
     bool dequeue(QUEUETYPE &value)
     {
-        return deleteEnd(value);
+        return deleteBeginning(value);
     }
     bool isEmptyQueue()
     {
