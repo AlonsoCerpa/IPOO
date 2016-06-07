@@ -47,8 +47,11 @@ int main()
     jerbo.ingPesoGr(120);
     jerbo.ingAlimento("Semillas, insectos y vegetales.");
 
-    Roedor *aR[] = {&raton, &hamster, &jerbo};
-    ArregloRoedor roedores{aR, 3};
+    //Roedor *aR[] = {&raton, &hamster, &jerbo};
+    //ArregloRoedor roedores{aR, 3};
+
+    vector<Roedor *> rA = {&raton, &hamster, &jerbo};
+    ArregloRoedor roedores{rA};
 
     roedores.obtRoedor(0) -> obtEnf();
     roedores.obtRoedor(1) -> obtMov();

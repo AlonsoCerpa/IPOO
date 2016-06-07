@@ -53,7 +53,7 @@ public:
 };
 
 ////////////////////////////////////////////////////////////////////
-
+/*
 class ArregloRoedor
 {
 private:
@@ -65,8 +65,8 @@ public:
     Roedor *obtRoedor(const unsigned &pos) const;
     unsigned obtNumRoed() const;
 };
-
-/*                                             //Ex. 3
+*/
+                                             //Ex. 3
 class ArregloRoedor
 {
 private:
@@ -79,5 +79,5 @@ public:
     Roedor *obtRoedor(const unsigned &pos) const;
     unsigned obtNumRoed() const;
 };
-*/
+
 #endif // EJER2_H_INCLUDED

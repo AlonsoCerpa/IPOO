@@ -69,7 +69,7 @@ void Jerbo::obtMov() const
 }
 
 ////////////////////////////////////////////////////////////////////////
-
+/*
 ArregloRoedor::ArregloRoedor(Roedor *_arrRoed[], const unsigned &_numRoedores)
     : numRoedores{_numRoedores}
 {
@@ -90,7 +90,7 @@ void ArregloRoedor::ingresarRoedor(Roedor *roedor)
     arrRoed[numRoedores - 1] = roedor;
     delete[] aux;
 }
-
+*/
 Roedor *ArregloRoedor::obtRoedor(const unsigned &pos) const
 {
     return arrRoed[pos];
@@ -101,7 +101,7 @@ unsigned ArregloRoedor::obtNumRoed() const
     return numRoedores;
 }
 
-/*
+
 ArregloRoedor::ArregloRoedor(Roedor *_arrRoed[], const unsigned &_numRoedores)  //Ex. 3
     : arrRoed(_numRoedores)
 {
@@ -120,5 +120,5 @@ void ArregloRoedor::ingresarRoedor(Roedor *roedor)
 {
     arrRoed.push_back(roedor);
 }
-*/
+
 
