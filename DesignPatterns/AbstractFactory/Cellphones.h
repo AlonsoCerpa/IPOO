@@ -17,25 +17,25 @@ protected:
 class SamsungCheapCellp : public Cellphone
 {
 public:
-    void getDescription() const;
+    virtual void getDescription() const;
 };
 
 class SamsungExpensiveCellp : public Cellphone
 {
 public:
-    void getDescription() const;
+    virtual void getDescription() const;
 };
 
 class LGCheapCellp : public Cellphone
 {
 public:
-    void getDescription() const;
+    virtual void getDescription() const;
 };
 
 class LGExpensiveCellp : public Cellphone
 {
 public:
-    void getDescription() const;
+    virtual void getDescription() const;
 };
 
 //////////////////////////////////////////////////////////
@@ -53,15 +53,15 @@ public:
 class SamsungFactory : public Factory
 {
 public:
-    Cellphone* createCheapCellp();
-    Cellphone* createExpensiveCellp();
+    virtual Cellphone* createCheapCellp();
+    virtual Cellphone* createExpensiveCellp();
 };
 
 class LGFactory : public Factory
 {
 public:
-    Cellphone* createCheapCellp();
-    Cellphone* createExpensiveCellp();
+    virtual Cellphone* createCheapCellp();
+    virtual Cellphone* createExpensiveCellp();
 };
 
 #endif // CELLPHONES_H_INCLUDED

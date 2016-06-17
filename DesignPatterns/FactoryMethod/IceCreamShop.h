@@ -14,19 +14,19 @@ public:
 class ChocolateIC : public IceCream
 {
 public:
-    void getInfoIC();
+    virtual void getInfoIC();
 };
 
 class VanillaIC : public IceCream
 {
 public:
-    void getInfoIC();
+    virtual void getInfoIC();
 };
 
 class LucumaIC : public IceCream
 {
 public:
-    void getInfoIC();
+    virtual void getInfoIC();
 };
 
 #endif // ICECREAMSHOP_H_INCLUDED

@@ -1,6 +1,8 @@
 #include "IceCreamShop.h"
 #include <iostream>
 
+IceCream::~IceCream() {}
+
 IceCream *IceCream::makeIceCream(int choice)
 {
     if (choice == 1)
@@ -9,9 +11,9 @@ IceCream *IceCream::makeIceCream(int choice)
         return new VanillaIC;
     else if (choice == 3)
         return new LucumaIC;
+    else
+        return nullptr;
 }
-
-IceCream::~IceCream() {}
 
 ////////////////////////////////////////////////////////
 
