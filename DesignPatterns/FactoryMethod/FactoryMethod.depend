@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1466157345 source:c:\users\acerp\desktop\factorymethod\icecreamshop.cpp
+	"IceCreamShop.h"
+	<iostream>
+
+1466157321 c:\users\acerp\desktop\factorymethod\icecreamshop.h
+
+1466157294 source:c:\users\acerp\desktop\factorymethod\main.cpp
+	<iostream>
+	<vector>
+	"IceCreamShop.h"
+
