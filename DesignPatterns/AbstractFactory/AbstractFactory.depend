@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1466150230 source:c:\users\acerp\desktop\abstractfactory\cellphones.cpp
+	"Cellphones.h"
+	<iostream>
+
+1466151151 c:\users\acerp\desktop\abstractfactory\cellphones.h
+
+1466151151 source:c:\users\acerp\desktop\abstractfactory\main.cpp
+	<iostream>
+	"Cellphones.h"
+
