@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1467085592 source:c:\users\acerp\desktop\wordcounter\main.cpp
+	<iostream>
+	<fstream>
+	"MapWords.h"
+
+1467086348 c:\users\acerp\desktop\wordcounter\mapwords.h
+	<iostream>
+	<fstream>
+	<map>
+
+1467086281 source:c:\users\acerp\desktop\wordcounter\mapwords.cpp
+	"MapWords.h"
+

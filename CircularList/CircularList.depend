@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1466780816 source:c:\users\alumno-c\desktop\circularlist\circularlist.cpp
+	"CircularList.h"
+	<iostream>
+	"Node.h"
+
+1466780872 c:\users\alumno-c\desktop\circularlist\circularlist.h
+	"Node.h"
+
+1466779830 c:\users\alumno-c\desktop\circularlist\node.h
+	"CircularList.h"
+
+1466779902 source:c:\users\alumno-c\desktop\circularlist\main.cpp
+	<iostream>
+	"Node.h"
+	"CircularList.h"
+
+1466779806 source:c:\users\alumno-c\desktop\circularlist\node.cpp
+	"Node.h"
+
+1467064417 source:c:\users\acerp\desktop\circularlist\circularlist.cpp
+	"CircularList.h"
+	<iostream>
+	"Node.h"
+
+1467063734 c:\users\acerp\desktop\circularlist\circularlist.h
+	"Node.h"
+
+1467064417 c:\users\acerp\desktop\circularlist\node.h
+	"CircularList.h"
+
+1467063364 source:c:\users\acerp\desktop\circularlist\main.cpp
+	<iostream>
+	"Node.h"
+	"CircularList.h"
+
+1467075345 source:c:\users\acerp\desktop\circularlist\node.cpp
+	"Node.h"
+
