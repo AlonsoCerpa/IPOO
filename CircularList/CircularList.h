@@ -14,6 +14,7 @@ public:
     T popBack();
     void print();
     CircularList<T> &operator+(const CircularList<T> &circList);
+    bool operator==(const CircularList<T> &circList);
 private:
     bool isEmpty() const;
 

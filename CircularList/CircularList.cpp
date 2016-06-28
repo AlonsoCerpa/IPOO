@@ -2,6 +2,8 @@
 #include <iostream>
 #include "Node.h"
 
+template class CircularList<int>;
+
 template<typename T>
 CircularList<T>::~CircularList()
 {
@@ -110,7 +112,7 @@ void CircularList<T>::print()
 template<typename T>
 CircularList<T> &CircularList<T>::operator+(const CircularList<T> &circList)
 {
-    CircularList newCL = *(new CircularList);
+    CircularList &newCL = *(new CircularList);
 
     Node<T> *auxPtr = this->firstNode;
     while (auxPtr != this->lastNode)
@@ -131,5 +133,38 @@ CircularList<T> &CircularList<T>::operator+(const CircularList<T> &circList)
     return newCL;
 }
 
-template class CircularList<int>;
+template<typename T>
+bool CircularList<T>::operator==(const CircularList<T> &circList)
+{
+    if (this == &circList)
+    {
+        std::cout << "Comparing the same list" << std::endl;
+        return true;
+    }
+
+    else
+    {
+        if (this->isEmpty() && circList.isEmpty())
+            return true;
+        else if ((this->isEmpty() && circList.firstNode != nullptr)
+                 || (circList.isEmpty() && this->firstNode != nullptr))
+            return false;
+
+        Node<T> *auxPtr1 = this->firstNode;
+        Node<T> *auxPtr2 = circList.firstNode;
+        while (auxPtr1->data == auxPtr2->data && auxPtr1 != this->lastNode
+               && auxPtr2 != circList.lastNode)
+        {
+            auxPtr1 = auxPtr1->nextNode;
+            auxPtr2 = auxPtr2->nextNode;
+        }
+
+        if (auxPtr1 == this->lastNode && auxPtr2 == circList.lastNode &&
+            auxPtr1->data == auxPtr2->data)
+            return true;
+        else
+            return false;
+    }
+}
+
 
