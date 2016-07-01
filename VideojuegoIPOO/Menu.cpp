@@ -1,146 +1,77 @@
-#include "Menu.h"
-#include "Input.h"
-#include "Game.h"
+#include "Screen.h"
 
-void Menu::iniScreen()
+//Class Screen
+/*
+bool Screen::loadScreen (const std::string &ScreenDir)
 {
-    setSpritesPosition();
-    loadTextures();
-    setSpritesTextures();
-    setButtonsFalse();
+    return ScreenTexture.loadFromFile(ScreenDir);
 }
 
-int Menu::loadTextures()
+void Screen::setScreenTexture()
 {
-    if(!titleT.loadFromFile("imagenes/Menu/title.png"))
-        return 0:
-    if(!newGameB.loadButtonOff("imagenes/Menu/newGameOff.png"))
-        return 0;
-    if(!newGameB.loadButtonOn("imagenes/Menu/newGameOn.png"))
-        return 0;
-    if(!optionsB.loadButtonOff("imagenes/Menu/optionsOff.png"))
-        return 0;
-    if(!optionsB.loadButtonOn("imagenes/Menu/optionsOn.png"))
-        return 0;
-    if(!topPlayersB.loadButtonOff("imagenes/Menu/topPlayersOff.png"))
-        return 0;
-    if(!topPlayersB.loadButtonOn("imagenes/Menu/topPlayersOn.png"))
-        return 0;
-    if(!creditsB.loadButtonOff("imagenes/Menu/creditsOff.png"))
-        return 0;
-    if(!creditsB.loadButtonOn("imagenes/Menu/creditsOn.png"))
-        return 0;
-    if(!exitB.loadButtonOff("imagenes/Menu/exitOff.png"))
-        return 0;
-    if(!exitB.loadButtonOn("imagenes/Menu/exitOn.png"))
-        return 0;
-
-    return 1;
+    ScreenSprite.setTexture(ScreenTexture);
 }
 
-void Menu::setSpritesTextures()
+void Screen::setScreenPosition(const sf::Vector2f &pos)
 {
-    titleS.setTexture(titleT);
-    newGameB.setButtonTexture();
-    optionsB.setButtonTexture();
-    topPlayersB.setButtonTexture();
-    creditsB.setButtonTexture();
-    exitB.setButtonTexture();
+    ScreenSprite.setPosition(pos);
 }
 
-void Menu::setSpritesPosition()
+sf::Sprite Screen::getScreenSprite() const
 {
-    titleS.setPosition(sf::Vector2f{195.f, 0.f});
-    newGameB.setButtonPosition(sf::Vector2f{195.f, 200.f});
-    optionsB.setButtonPosition(sf::Vector2f{195.f, 280.f});
-    topPlayersB.setButtonPosition(sf::Vector2f{195.f, 360.f});
-    creditsB.setButtonPosition(sf::Vector2f{195.f, 440.f});
-    exitB.setButtonPosition(sf::Vector2f{195.f, 520.f});
+    return ScreenSprite;
 }
 
-void Menu::updateScreen()
+bool Screen::ScreenIsOpen()
 {
-    updateButtonStates();
-    setButtonsFalse();
+    return ScreenOpen;
 }
 
-void Menu::updateButtonStates()
+void Screen::setScreenOpen(bool state)
 {
-    if (newGameB.buttonSprite.getLocalBounds().contains(input->mousePosX, input->mousePosY)){
-        if(currentButton != 1){
-            currentButton = 1;
-            buttonSound.play();
-        }
-        newGameB.setButtonOver(true);
-        if (Game::input->CLICLEFT)
-            Game::currentScreen = 1;
-    }
+    ScreenOpen = state;
+}
 
-    else if (optionsB.buttonSprite.getLocalBounds().contains(input->mousePosX, input->mousePosY)){
-        if(currentButton != 2){
-            currentButton = 2;
-            buttonSound.play();
-        }
-        optionsB.setButtonOver(true);
-        if (input->CLICLEFT)
-            currentScreen = 2;
-    }
+////////////////////////////////////////////////////////////////
 
-    else if (topPlayersB.buttonSprite.getLocalBounds().contains(input->mousePosX, input->mousePosY)){
-        if(currentButton != 3){
-            currentButton = 3;
-            buttonSound.play();
-        }
-        topPlayersB.setButtonOver(true);
-        if (input->CLICLEFT)
-            currentScreen = 3;
-    }
+//Class ScreenButton, derived from Screen
 
-    else if (creditsB.buttonSprite.getLocalBounds().contains(input->mousePosX, input->mousePosY)){
-        if(currentButton != 4){
-            currentButton = 4;
-            buttonSound.play();
-        }
-        creditsB.setButtonOver(true);
-        if (input->CLICLEFT)
-            currentScreen = 4;
-    }
+ScreenButton::ScreenButton(const int &nItem)
+{
+    numItem = nItem;
+}
 
-    else if (exitB.buttonSprite.getLocalBounds().contains(input->mousePosX, input->mousePosY)){
-        if(currentButton != 5){
-            currentButton = 5;
-            buttonSound.play();
-        }
-        exitB.setButtonOver(true);
-        if (input->CLICLEFT)
-            isPlaying = false;
-    }
+bool ScreenButton::loadScreenOn(const std::string &dir)
+{
+    return buttonOn.loadFromFile(dir);
+}
 
+void ScreenButton::setMouseOver(bool isOver)
+{
+    mouseOver = isOver;
+}
+
+bool ScreenButton::isMouseOver()
+{
+    return mouseOver;
+}
+
+void ScreenButton::setButtonPressed(bool buPressed)
+{
+    this->pressed = buPressed;
+}
+
+bool ScreenButton::buttonPressed() const
+{
+    return pressed;
+}
+
+void ScreenButton::updateButton()
+{
+    if(mouseOver == false)
+        ScreenSprite.setTexture(ScreenTexture);
     else
-        currentButton = 0;
-
-    newGameB.updateButton();
-    optionsB.updateButton();
-    topPlayersB.updateButton();
-    creditsB.updateButton();
-    exitB.updateButton();
+        ScreenSprite.setTexture(buttonOn);
 }
 
-void Menu::setButtonsFalse()
-{
-    newGameB.setButtonOver(false);
-    optionsB.setButtonOver(false);
-    topPlayersB.setButtonOver(false);
-    creditsB.setButtonOver(false);
-    exitB.setButtonOver(false);
-}
-
-void Menu::renderScreen()
-{
-    ventana.draw(titleS);
-    ventana.draw(newGameB.buttonSprite);
-    ventana.draw(optionsB.buttonSprite);
-    ventana.draw(topPlayersB.buttonSprite);
-    ventana.draw(creditsB.buttonSprite);
-    ventana.draw(exitB.buttonSprite);
-}
+*/

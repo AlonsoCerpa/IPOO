@@ -7,19 +7,25 @@
 class Button
 {
 public:
-    bool loadButtonOff(const std::string &);
-    bool loadButtonOn(const std::string &);
-    void setButtonTexture();
-    void setButtonPosition(const sf::Vector2f &pos);
-    void setButtonOver(bool);
-    bool isButtonOver() const;
+    Button(const int &nItem);
+    bool loadScreen(const std::string &);
+    void setScreenTexture();
+    void setScreenPosition(const sf::Vector2f &pos);
+    bool ScreenIsOpen();
+    void setScreenOpen(bool state);
+    bool loadScreenOn(const std::string &);
+    void setMouseOver(bool);
+    bool isMouseOver();
+    void setButtonPressed(bool);
+    bool buttonPressed() const;
     void updateButton();
-
-    sf::Sprite buttonSprite;
+    sf::Sprite ScreenSprite;
 private:
-    sf::Texture buttonOff;
+    sf::Texture ScreenTexture;
+    bool ScreenOpen{true};
     sf::Texture buttonOn;
-    bool buttonOver{false};
+    bool mouseOver{false};
+    bool pressed{false};
     int numItem;
 };
 

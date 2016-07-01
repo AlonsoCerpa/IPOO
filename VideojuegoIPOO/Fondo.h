@@ -4,10 +4,12 @@
 #include <SFML/Graphics.hpp>
 #include <string>
 
+using std::string;
+
 class Fondo
 {
 public:
-    bool loadFondo(const std::string &);
+    bool loadFondo(const string &);
     void setFondoTexture();
     void setFondoPosition(const sf::Vector2f &);
     void moveFondo(const int &);

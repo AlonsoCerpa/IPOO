@@ -1,7 +1,7 @@
 #include "Vehicle.h"
 #include <stdexcept>
 
-//Vehicle, abstract class
+//Car class
 
 bool Vehicle::loadVehicle(const string &dir)
 {
@@ -12,6 +12,7 @@ void Vehicle::setVehicleTexture(){
     width = vehicleTexture.getSize().x;
     height = vehicleTexture.getSize().y;
     vehicleSprite.setTexture(vehicleTexture);
+    vehicleSprite.setColor(sf::Color(255, 255, 255));
 }
 
 void Vehicle::setVehiclePosition(const sf::Vector2f &vec)
@@ -29,7 +30,6 @@ sf::Sprite Vehicle::getVehicleSprite() const
     return vehicleSprite;
 }
 
-////////////////////////////////////////////////////////////////////////////////////
 //CarPlayer class
 
 void CarPlayer::movement(const int &dir)
@@ -49,11 +49,16 @@ void CarPlayer::movement(const int &dir)
     }
 
     vehicleSprite.move(position);
-    if(vehicleSprite.getPosition().y > 599.f - height)
-        vehicleSprite.setPosition({vehicleSprite.getPosition().x, 599.f - height});
+    if(vehicleSprite.getPosition().y > 600.f - height)
+        vehicleSprite.setPosition({vehicleSprite.getPosition().x, 600.f - height});
+    else if(vehicleSprite.getPosition().y < 0.f)
+        vehicleSprite.setPosition({vehicleSprite.getPosition().x, 0.f});
+    else if(vehicleSprite.getPosition().x < 265.f)
+        vehicleSprite.setPosition({265.f, vehicleSprite.getPosition().y});
+    else if(vehicleSprite.getPosition().x > 365.f)
+        vehicleSprite.setPosition({465.f, vehicleSprite.getPosition().y});
 }
 
-////////////////////////////////////////////////////////////////////////////////////
 //Obstacle class
 
 Obstacle &Obstacle::operator=(const Obstacle &obs)

@@ -1,28 +1,39 @@
-#ifndef MENU_H_INCLUDED
-#define MENU_H_INCLUDED
+#ifndef Screen_H_INCLUDED
+#define Screen_H_INCLUDED
 
-#include "Screen.h"
-
-class Menu : public Screen
+#include <SFML/Graphics.hpp>
+#include <string>
+/*
+class Screen
 {
 public:
-    virtual void iniScreen();
-    virtual void updateScreen();
-    virtual void renderScreen();
-private:
-    virtual int loadTextures();
-    virtual void setSpritesTextures();
-    virtual void setSpritesPosition();
-    virtual void updateButtonStates();
-    virtual void setButtonsFalse();
-
-    Button newGameB;
-    Button optionsB;
-    Button topPlayersB;
-    Button creditsB;
-    Button exitB;
-    sf::Texture titleT;
-    sf::Sprite titleS;
+    bool loadScreen(const std::string &);
+    void setScreenTexture();
+    void setScreenPosition(const sf::Vector2f &pos);
+    sf::Sprite getScreenSprite() const;
+    bool ScreenIsOpen();
+    void setScreenOpen(bool state);
+protected:
+    sf::Texture ScreenTexture;
+    sf::Sprite ScreenSprite;
+    bool ScreenOpen{true};
 };
 
-#endif // MENU_H_INCLUDED
+class ScreenButton : public Screen
+{
+public:
+    ScreenButton(const int &nItem);
+    bool loadScreenOn(const std::string &);
+    void setMouseOver(bool);
+    bool isMouseOver();
+    void setButtonPressed(bool);
+    bool buttonPressed() const;
+    void updateButton();
+private:
+    sf::Texture buttonOn;
+    bool mouseOver{false};
+    bool pressed{false};
+    int numItem;
+};
+*/
+#endif // Screen_H_INCLUDED

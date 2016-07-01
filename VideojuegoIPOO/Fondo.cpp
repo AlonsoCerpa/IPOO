@@ -1,7 +1,8 @@
 #include "Fondo.h"
 #include "Vehicle.h"
+#include "Game.h"
 
-bool Fondo::loadFondo(const std::string &dir)
+bool Fondo::loadFondo(const string &dir)
 {
     return fondoTexture.loadFromFile(dir);
 }

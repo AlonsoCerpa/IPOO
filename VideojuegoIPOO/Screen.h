@@ -1,42 +1,24 @@
 #ifndef SCREEN_H_INCLUDED
 #define SCREEN_H_INCLUDED
 
-#include <SFML/Graphics.hpp>
-#include <SFML/Audio.hpp>
-
 #include <string>
-#include <vector>
-
-#include "Button.h"
-#include "Input.h"
+#include <SFML/Graphics.hpp>
 
 class Screen
 {
 public:
-    virtual void iniScreen() = 0;
-    virtual void updateScreen() = 0;
-    virtual void renderScreen() = 0;
-    static int loadSounds();
-    static void setSounds();
-
-protected:
-    virtual int loadTextures() = 0;
-    virtual void setSpritesTextures() = 0;
-    virtual void setSpritesPosition() = 0;
-    virtual void updateButtonStates() = 0;
-    virtual void setButtonsFalse() = 0;
-
-    static int difficulty;
-    static sf::RenderWindow ventana;
-    static Input *input;
-    static int currentScreen;
-    static bool sound;
-    static bool pause;
-    static sf::Font font;
-    static sf::SoundBuffer buttonBuff;
-    static sf::Sound buttonSound;
-
-    int currentButton;
+    //bool loadScreenFondo(const std::string &);
+    bool loadScreen(const std::string &);
+    void setScreenTexture();
+    void setScreenPosition(const sf::Vector2f &pos);
+    sf::Sprite getScreenSprite() const;
+    bool ScreenIsOpen();
+    void setScreenOpen(bool state);
+private:
+    //sf::Texture fondoCompleto;
+    sf::Texture ScreenTexture;
+    sf::Sprite ScreenSprite;
+    bool ScreenOpen{true};
 };
 
 #endif // SCREEN_H_INCLUDED

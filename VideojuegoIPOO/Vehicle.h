@@ -4,12 +4,15 @@
 #include <iostream>
 #include <vector>
 
+using std::string;
+using std::vector;
+
 #include <SFML/Graphics.hpp>
 
 class Vehicle
 {
 public:
-    bool loadVehicle(const std::string &);
+    bool loadVehicle(const string &);
     void setVehicleTexture();
     void setVehiclePosition(const sf::Vector2f &);
     sf::FloatRect getVehicleBounds() const;
@@ -28,7 +31,6 @@ class CarPlayer : public Vehicle
 {
 public:
     virtual void movement(const int &);
-private:
     float speedVehicle{100.f};
 };
 
@@ -36,12 +38,15 @@ private:
 
 class Obstacle : public Vehicle
 {
+    friend class Fondo;
 public:
     Obstacle &operator=(const Obstacle &);
     virtual void movement(const int &);
     static void setVehicleSpeed(const float &);
     static float getSpeedVehicle();
     static float speedVehicle;
+//private:
+
 };
 
 #endif // VEHICLE_H_INCLUDED

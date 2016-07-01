@@ -1,7 +1,10 @@
 # depslib dependency file v1.0
-1466518882 source:c:\users\acerp\desktop\videojuegoipoo\main.cpp
-	"Game.h"
-	<memory>
+1466739664 source:c:\users\acerp\desktop\videojuegoipoofuncionando\button.cpp
+	"Button.h"
+
+1466739664 c:\users\acerp\desktop\videojuegoipoofuncionando\button.h
+	<string>
+	<SFML/Graphics.hpp>
 
 1429780453 c:\users\acerp\desktop\sfml-2.3.2-windows-gcc-4.7.1-tdm-32-bit\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -381,97 +384,39 @@
 	<string>
 	<vector>
 
-1466615592 source:c:\users\acerp\desktop\videojuegoipoo\game.cpp
+1467237825 source:c:\users\acerp\desktop\videojuegoipoofuncionando\fondo.cpp
+	"Fondo.h"
+	"Vehicle.h"
 	"Game.h"
-	<iostream>
-	<random>
-	<SFML/Audio.hpp>
 
-1466650287 c:\users\acerp\desktop\videojuegoipoo\game.h
+1465560626 c:\users\acerp\desktop\videojuegoipoofuncionando\fondo.h
 	<SFML/Graphics.hpp>
-	<SFML/Audio.hpp>
+	<string>
+
+1467244152 c:\users\acerp\desktop\videojuegoipoofuncionando\vehicle.h
+	<iostream>
+	<vector>
+	<SFML/Graphics.hpp>
+
+1467374548 c:\users\acerp\desktop\videojuegoipoofuncionando\game.h
+	<SFML/Graphics.hpp>
+	"Vehicle.h"
+	"Fondo.h"
 	"Menu.h"
-	"NewGame.h"
-	"Options.h"
-	"TopPlayers.h"
-	"Credits.h"
+	"Screen.h"
 	"Button.h"
-
-1464605390 source:c:\users\acerp\desktop\videojuegoipoo\car.cpp
-	"Car.h"
-
-1464605390 c:\users\acerp\desktop\videojuegoipoo\car.h
-	<iostream>
-	<SFML/Graphics.hpp>
-
-1466701492 c:\users\acerp\desktop\videojuegoipoo\vehicle.h
-	<iostream>
-	<vector>
-	<SFML/Graphics.hpp>
-
-1466519412 source:c:\users\acerp\desktop\videojuegoipoo\vehicle.cpp
-	"Vehicle.h"
-	<stdexcept>
-
-1466519542 c:\users\acerp\desktop\videojuegoipoo\fondo.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1466650080 source:c:\users\acerp\desktop\videojuegoipoo\fondo.cpp
-	"Fondo.h"
-	"Vehicle.h"
-
-1466618200 source:c:\users\acerp\desktop\videojuegoipoo\gameprocesses.cpp
-	"Game.h"
-
-1465632595 source:c:\users\acerp\desktop\videojuegoipoocopia\fondo.cpp
-	"Fondo.h"
-	"Vehicle.h"
-
-1465560626 c:\users\acerp\desktop\videojuegoipoocopia\fondo.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1465534558 c:\users\acerp\desktop\videojuegoipoocopia\vehicle.h
-	<iostream>
-	<vector>
-	<SFML/Graphics.hpp>
-
-1465640479 source:c:\users\acerp\desktop\videojuegoipoocopia\game.cpp
-	"Game.h"
-	<iostream>
-	<random>
-
-1465640378 c:\users\acerp\desktop\videojuegoipoocopia\game.h
-	<SFML/Graphics.hpp>
-	"Vehicle.h"
-	"Fondo.h"
-	"Menu.h"
 	<queue>
+	<SFML/Audio.hpp>
+	"PlayerScore.h"
+	<fstream>
 
-1465640378 source:c:\users\acerp\desktop\videojuegoipoocopia\gameprocesses.cpp
-	"Game.h"
-
-1465375450 source:c:\users\acerp\desktop\videojuegoipoocopia\main.cpp
-	"Game.h"
-	<memory>
-
-1465632835 source:c:\users\acerp\desktop\videojuegoipoocopia\vehicle.cpp
-	"Vehicle.h"
-	<stdexcept>
-
-1465639893 c:\users\acerp\desktop\videojuegoipoocopia\menu.h
+1465889190 c:\users\acerp\desktop\videojuegoipoofuncionando\menu.h
 	<SFML/Graphics.hpp>
 	<string>
 
-1465639927 source:c:\users\acerp\desktop\videojuegoipoocopia\menu.cpp
-	"Menu.h"
-
-1466650172 c:\users\acerp\desktop\videojuegoipoo\menu.h
-	"Screen.h"
-
-1465889362 source:c:\users\acerp\desktop\videojuegoipoo\menu.cpp
-	"Screen.h"
+1465894000 c:\users\acerp\desktop\videojuegoipoofuncionando\screen.h
+	<string>
+	<SFML/Graphics.hpp>
 
 1429780453 c:\users\acerp\desktop\sfml-2.3.2-windows-gcc-4.7.1-tdm-32-bit\sfml-2.3.2\include\sfml\audio.hpp
 	<SFML/System.hpp>
@@ -576,211 +521,33 @@
 	<SFML/Audio/Export.hpp>
 	<string>
 
-1466650068 c:\users\acerp\desktop\videojuegoipoo\screen.h
-	<SFML/Graphics.hpp>
-	"Button.h"
-	<string>
-	<vector>
+1467231193 source:c:\users\acerp\desktop\videojuegoipoofuncionando\gameprocesses.cpp
+	"Game.h"
 
-1466618436 c:\users\acerp\desktop\videojuegoipoo\button.h
-	<string>
-	<SFML/Graphics.hpp>
+1467371589 source:c:\users\acerp\desktop\videojuegoipoofuncionando\main.cpp
+	"Game.h"
+	<memory>
 
-1466618436 source:c:\users\acerp\desktop\videojuegoipoo\button.cpp
-	"Button.h"
-
-1466618588 source:c:\users\acerp\desktop\videojuegoipoo\screen.cpp
+1467139366 source:c:\users\acerp\desktop\videojuegoipoofuncionando\menu.cpp
 	"Screen.h"
 
-1465889514 source:g:\videojuegoipoo\button.cpp
-	"Button.h"
+1467356030 source:c:\users\acerp\desktop\videojuegoipoofuncionando\screen.cpp
+	"Screen.h"
 
-1465895230 g:\videojuegoipoo\button.h
-	<string>
-	<SFML/Graphics.hpp>
-
-1465632596 source:g:\videojuegoipoo\fondo.cpp
-	"Fondo.h"
+1467356030 source:c:\users\acerp\desktop\videojuegoipoofuncionando\vehicle.cpp
 	"Vehicle.h"
+	<stdexcept>
 
-1465560626 g:\videojuegoipoo\fondo.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1465977120 g:\videojuegoipoo\vehicle.h
-	<iostream>
-	<vector>
-	<SFML/Graphics.hpp>
-
-1465982628 source:g:\videojuegoipoo\game.cpp
+1467373975 source:c:\users\acerp\desktop\videojuegoipoofuncionando\game.cpp
 	"Game.h"
 	<iostream>
 	<random>
 	<SFML/Audio.hpp>
 
-1465980688 g:\videojuegoipoo\game.h
-	<SFML/Graphics.hpp>
-	"Vehicle.h"
-	"Fondo.h"
-	"Menu.h"
-	"Screen.h"
-	"Button.h"
-	<queue>
-	<SFML/Audio.hpp>
-
-1465889190 g:\videojuegoipoo\menu.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1465894000 g:\videojuegoipoo\screen.h
-	<string>
-	<SFML/Graphics.hpp>
-
-1465981880 source:g:\videojuegoipoo\gameprocesses.cpp
-	"Game.h"
-
-1465375450 source:g:\videojuegoipoo\main.cpp
-	"Game.h"
-	<memory>
-
-1465889362 source:g:\videojuegoipoo\menu.cpp
-	"Screen.h"
-
-1465894014 source:g:\videojuegoipoo\screen.cpp
-	"Screen.h"
-
-1465815582 source:g:\videojuegoipoo\vehicle.cpp
-	"Vehicle.h"
-	<stdexcept>
-
-1466516644 source:c:\users\acerp\desktop\videojuegoipoo - copia\button.cpp
-	"Button.h"
-
-1466516645 c:\users\acerp\desktop\videojuegoipoo - copia\button.h
-	<string>
-	<SFML/Graphics.hpp>
-
-1465632596 source:c:\users\acerp\desktop\videojuegoipoo - copia\fondo.cpp
-	"Fondo.h"
-	"Vehicle.h"
-
-1466519541 c:\users\acerp\desktop\videojuegoipoo - copia\fondo.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1466517100 c:\users\acerp\desktop\videojuegoipoo - copia\vehicle.h
-	<iostream>
-	<vector>
-	<SFML/Graphics.hpp>
-
-1466544019 source:c:\users\acerp\desktop\videojuegoipoo - copia\gameprocesses.cpp
-	"Game.h"
-
-1466525037 c:\users\acerp\desktop\videojuegoipoo - copia\game.h
-	<SFML/Graphics.hpp>
-	"Vehicle.h"
-	"Fondo.h"
-	"Screen.h"
-	"Button.h"
-	<queue>
-	<SFML/Audio.hpp>
-
-1465889190 c:\users\acerp\desktop\videojuegoipoo - copia\menu.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1466525037 c:\users\acerp\desktop\videojuegoipoo - copia\screen.h
-	<SFML/Graphics.hpp>
-	"Button.h"
+1467333673 c:\users\acerp\desktop\videojuegoipoofuncionando\playerscore.h
 	<string>
 	<vector>
 
-1466518881 source:c:\users\acerp\desktop\videojuegoipoo - copia\main.cpp
-	"Game.h"
-	<memory>
-
-1465889362 source:c:\users\acerp\desktop\videojuegoipoo - copia\menu.cpp
-	"Screen.h"
-
-1466520563 source:c:\users\acerp\desktop\videojuegoipoo - copia\screen.cpp
-	"Screen.h"
-
-1466519411 source:c:\users\acerp\desktop\videojuegoipoo - copia\vehicle.cpp
-	"Vehicle.h"
-	<stdexcept>
-
-1466544587 source:c:\users\acerp\desktop\videojuegoipoo - copia\game.cpp
-	"Game.h"
-	<iostream>
-	<random>
-	<SFML/Audio.hpp>
-
-1466516646 source:g:\videojuegoipoo - copia\button.cpp
-	"Button.h"
-
-1466516646 g:\videojuegoipoo - copia\button.h
-	<string>
-	<SFML/Graphics.hpp>
-
-1465632596 source:g:\videojuegoipoo - copia\fondo.cpp
-	"Fondo.h"
-	"Vehicle.h"
-
-1466519542 g:\videojuegoipoo - copia\fondo.h
-	<SFML/Graphics.hpp>
-	<string>
-
-1466517102 g:\videojuegoipoo - copia\vehicle.h
-	<iostream>
-	<vector>
-	<SFML/Graphics.hpp>
-
-1466547938 source:g:\videojuegoipoo - copia\game.cpp
-	"Game.h"
-	<iostream>
-	<random>
-	<SFML/Audio.hpp>
-
-1466525038 g:\videojuegoipoo - copia\game.h
-	<SFML/Graphics.hpp>
-	"Vehicle.h"
-	"Fondo.h"
-	"Screen.h"
-	"Button.h"
-	<queue>
-	<SFML/Audio.hpp>
-
-1466525038 g:\videojuegoipoo - copia\screen.h
-	<SFML/Graphics.hpp>
-	"Button.h"
-	<string>
-	<vector>
-
-1466544020 source:g:\videojuegoipoo - copia\gameprocesses.cpp
-	"Game.h"
-
-1466518882 source:g:\videojuegoipoo - copia\main.cpp
-	"Game.h"
-	<memory>
-
-1466520564 source:g:\videojuegoipoo - copia\screen.cpp
-	"Screen.h"
-
-1466519412 source:g:\videojuegoipoo - copia\vehicle.cpp
-	"Vehicle.h"
-	<stdexcept>
-
-1466620508 source:c:\users\acerp\desktop\videojuegoipoo\credits.cpp
-	"Credits.h"
-
-1466637037 c:\users\acerp\desktop\videojuegoipoo\credits.h
-	"Screen.h"
-
-1466650204 c:\users\acerp\desktop\videojuegoipoo\newgame.h
-	"Vehicle.h"
-	"Fondo.h"
-
-1466620504 c:\users\acerp\desktop\videojuegoipoo\options.h
-
-1466620516 c:\users\acerp\desktop\videojuegoipoo\topplayers.h
+1467334548 source:c:\users\acerp\desktop\videojuegoipoofuncionando\playerscore.cpp
+	"PlayerScore.h"
 

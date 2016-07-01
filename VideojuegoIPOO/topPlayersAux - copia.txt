@@ -1,0 +1,24 @@
+Readme:
+
+El juego sólo funciona en Windows y para sistemas de 32bits en adelante.
+
+- Descargar la biblioteca gráfica SFML en su versión 2.3.2 para MINGW de 32 bits.
+	link: http://www.sfml-dev.org/download/sfml/2.3.2/
+- Luego instalar el Code::Blocks para compilar y correr el juego.
+- Abrir el proyecto VIDEOJUEGOIPOO.cbp (en el CodeBlocks),
+ hacer clic derecho sobre el nombre del proyecto (al lado izquierdo de la pantalla),
+ clic en build options, luego, en Compiler settings/C.Flags hacer clic en la opción que dice
+ -std=c++11; en Compiler sett./#defines, escribrir SFML_STATIC; despues en
+ Linker sett./Link libr. agregar las siguientes direcciones (modifique segun dónde descargó la biblioteca SFML):
+ NOTA: Hágalo en ese orden ya si importa.
+	- C:\Desktop\SFML-2.3.2\lib\libsfml-graphics.a
+	- C:\Desktop\SFML-2.3.2\lib\libsfml-window.a           
+	- C:\Desktop\SFML-2.3.2\lib\libsfml-system.a          
+	- C:\Desktop\SFML-2.3.2\lib\libsfml-audio.a
+- En Search directories/Compiler incluya la direccion de la carpeta include, y en
+ Search directories/Linker la direccion de la carpeta lib, p. ej.:
+	- C:\Desktop\SFML-2.3.2\include
+ 	- C:\Desktop\SFML-2.3.2\lib
+- Finalmente, dentro de la carpeta descargada de SFML, copie los archivos .dll
+ que se encuentran en SFML-2.3.2\bin a su carpeta del proyecto, específicamente en:
+ VideoJuegoIPOO\bin\Debug 

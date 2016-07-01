@@ -1,25 +1,31 @@
 #include "Screen.h"
 
-sf::RenderWindow Screen::ventana{sf::VideoMode{800, 600}, "Dodge Cars"};
-
-Input *Screen::input = Input::getInstance();
-
-int Screen::currentScreen = 0;
-
-bool Screen::sound = true;
-
-int Screen::difficulty = 1;
-
-bool Screen::pause = false;
-
-int Screen::loadSounds()
+bool Screen::loadScreen (const std::string &ScreenDir)
 {
-    if(!buttonBuff.loadFromFile("sounds/button.wav"))
-        return 0;
-    return 1;
+    return ScreenTexture.loadFromFile(ScreenDir);
 }
 
-void Screen::setSounds()
+void Screen::setScreenTexture()
 {
-    buttonSound.setBuffer(buttonBuff);
+    ScreenSprite.setTexture(ScreenTexture);
+}
+
+void Screen::setScreenPosition(const sf::Vector2f &pos)
+{
+    ScreenSprite.setPosition(pos);
+}
+
+sf::Sprite Screen::getScreenSprite() const
+{
+    return ScreenSprite;
+}
+
+bool Screen::ScreenIsOpen()
+{
+    return ScreenOpen;
+}
+
+void Screen::setScreenOpen(bool state)
+{
+    ScreenOpen = state;
 }

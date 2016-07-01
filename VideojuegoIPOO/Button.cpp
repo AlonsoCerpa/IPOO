@@ -1,39 +1,66 @@
 #include "Button.h"
 
-bool Button::loadButtonOff(const std::string &buttonDir)
+bool Button::loadScreen (const std::string &ScreenDir)
 {
-    return buttonOff.loadFromFile(buttonDir);
+    return ScreenTexture.loadFromFile(ScreenDir);
 }
 
-bool Button::loadButtonOn(const std::string &dir)
+void Button::setScreenTexture()
+{
+    ScreenSprite.setTexture(ScreenTexture);
+}
+
+void Button::setScreenPosition(const sf::Vector2f &pos)
+{
+    ScreenSprite.setPosition(pos);
+}
+
+bool Button::ScreenIsOpen()
+{
+    return ScreenOpen;
+}
+
+void Button::setScreenOpen(bool state)
+{
+    ScreenOpen = state;
+}
+
+////////////////////////////////////////////////////
+
+Button::Button(const int &nItem)
+{
+    numItem = nItem;
+}
+
+bool Button::loadScreenOn(const std::string &dir)
 {
     return buttonOn.loadFromFile(dir);
 }
 
-void Button::setButtonTexture()
+void Button::setMouseOver(bool isOver)
 {
-    buttonSprite.setTexture(buttonOff);
+    mouseOver = isOver;
 }
 
-void Button::setButtonPosition(const sf::Vector2f &pos)
+bool Button::isMouseOver()
 {
-    buttonSprite.setPosition(pos);
+    return mouseOver;
 }
 
-void Button::setButtonOver(bool isOver)
+void Button::setButtonPressed(bool buPressed)
 {
-    buttonOver = isOver;
+    this->pressed = buPressed;
 }
 
-bool Button::isButtonOver() const
+bool Button::buttonPressed() const
 {
-    return buttonOver;
+    return pressed;
 }
 
 void Button::updateButton()
 {
-    if(buttonOver == false)
-        buttonSprite.setTexture(buttonOff);
+    if(mouseOver == false)
+        ScreenSprite.setTexture(ScreenTexture);
     else
-        buttonSprite.setTexture(buttonOn);
+        ScreenSprite.setTexture(buttonOn);
 }

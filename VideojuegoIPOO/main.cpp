@@ -1,8 +1,10 @@
 #include "Game.h"
+#include <memory>
+
+std::shared_ptr<Game> myGame{Game::getInstance()};
 
 int main()
 {
-    Game *myGame = Game::getInstance();
     myGame -> run();
 
     return 0;
